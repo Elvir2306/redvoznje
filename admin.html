@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin cPanel</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header>
+            <h1><i class="fas fa-bus"></i> Admin cPanel</h1>
+            <p>Uredi polaske i relacije</p>
+        </header>
+
+        <div class="admin-controls">
+            <div class="route-form">
+                <h2><i class="fas fa-plus-circle"></i> Dodaj / Uredi Relaciju</h2>
+                <div class="form-group">
+                    <label for="admin-from">Polazak:</label>
+                    <select id="admin-from" class="admin-select">
+                        <option value="">Odaberi polazak</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="admin-to">Destinacija:</label>
+                    <select id="admin-to" class="admin-select">
+                        <option value="">Odaberi destinaciju</option>
+                    </select>
+                    <span class="or-text">ili</span>
+                    <input type="text" id="admin-to-new" class="admin-input" placeholder="Nova destinacija">
+                </div>
+                <div class="form-group">
+                    <label for="admin-time">Vrijeme (HH:MM):</label>
+                    <input type="text" id="admin-time" class="admin-input" placeholder="npr. 08:30">
+                    <button id="add-time" class="admin-btn"><i class="fas fa-plus"></i> Dodaj Vrijeme</button>
+                </div>
+                <div class="time-list-container">
+                    <h3>Trenutni raspored za <span id="current-route">[Odaberi Rutu]</span></h3>
+                    <ul id="time-list" class="time-list"></ul>
+                </div>
+                <div class="form-actions">
+                    <button id="save-route" class="admin-btn primary"><i class="fas fa-save"></i> Sačuvaj</button>
+                    <button id="delete-route" class="admin-btn danger"><i class="fas fa-trash"></i> Obriši Rutu</button>
+                </div>
+            </div>
+
+            <div class="all-routes">
+                <h2><i class="fas fa-list"></i> Sve Rute</h2>
+                <div id="routes-list" class="routes-list"></div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Nazad na Pregled</a>
+        </div>
+    </div>
+
+    <script src="bus-data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

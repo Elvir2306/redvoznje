@@ -105,7 +105,7 @@ function renderTimeList() {
     
     if (currentTimes.length === 0) {
         const li = document.createElement('li');
-        li.textContent = 'No times added yet';
+        li.textContent = 'Nema dodanih polazaka';
         li.style.color = '#666';
         li.style.fontStyle = 'italic';
         timeList.appendChild(li);
@@ -139,7 +139,7 @@ function addNewTime() {
     
     // Validate time format (HH:MM)
     if (!/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) {
-        alert('Please enter a valid time in HH:MM format (24-hour)');
+        alert('Unesi ispravno vrijeme u formatu HH:MM (24-sata)');
         return;
     }
     
@@ -149,14 +149,14 @@ function addNewTime() {
         renderTimeList();
         timeInput.value = '';
     } else {
-        alert('This time already exists for the selected route');
+        alert('Ovo vrijeme već postoji za odabranu rutu');
     }
 }
 
 // Save the current route
 function saveRoute() {
     if (!currentFrom || (!currentTo && !toNewInput.value.trim())) {
-        alert('Please select both "From" and "To" locations');
+        alert('Molim odaberi i "Polazak" i "Dolazak" lokacije');
         return;
     }
     
@@ -265,7 +265,7 @@ function renderAllRoutes() {
             if (busData[from][to].length > 5) {
                 const moreSpan = document.createElement('span');
                 moreSpan.className = 'route-time';
-                moreSpan.textContent = `+${busData[from][to].length - 5} još linija`;
+                moreSpan.textContent = `još dodatnih ${busData[from][to].length - 5} linija`;
                 timesContainer.appendChild(moreSpan);
             }
             

@@ -1,7 +1,7 @@
 {
-  "name": "Kannur Bus Timings",
-  "short_name": "Kannur Bus",
-  "description": "Bus timings for Kannur district routes",
+  "name": "Autobusne Linije",
+  "short_name": "Red Vožnje",
+  "description": "Pregled prigradskih linija u Zenici",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#4361ee",

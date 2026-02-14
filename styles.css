@@ -1,12 +1,12 @@
 :root {
     --primary: #111111;
     --secondary: #f21d39;
-    --accent: #17e810;
+    --accent: #e8890c;
     --light: #f8f9fa;
     --dark: #212529;
     --success: #4cc9f0;
     --warning: #f8961e;
-    --danger: #ef233c;
+    --danger: #f8f81e;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background: linear-gradient(95deg, var(--primary) 30%, var(--secondary) 70%);
     color: white;
     padding: 25px;
     text-align: center;
@@ -245,7 +245,7 @@ button:hover {
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    background: linear-gradient(95deg, var(--secondary) 30%, var(--primary) 70%);
     color: white;
     padding: 25px 20px 0;
     margin-top: 25px;
@@ -278,7 +278,7 @@ footer {
 
 .logo i {
     font-size: 1.8rem;
-    color: var(--accent);
+    color: var(--danger);
 }
 
 .footer-left p {
@@ -308,15 +308,15 @@ footer {
 }
 
 .signature {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.7rem;
+    font-family: 'Marck Script', cursive;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--accent);
-    background: white;
-    padding: 0 12px;
+    color: var(--danger);
+    background: transparent;
+    padding: 0 0px;
     border-radius: 4px;
     display: inline-block;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
 }
 
 .social-links {
